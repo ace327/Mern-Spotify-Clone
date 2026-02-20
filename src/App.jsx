@@ -3,6 +3,7 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import Sidebar from './components/Sidebar'
+import Player from './components/Player'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -14,12 +15,12 @@ function App() {
 
         <Sidebar />
 
-         
+         <Player/>
       </div>
 
     </div>
     </>
-  )
+  ) 
 }
 
 export default App
