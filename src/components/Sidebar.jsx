@@ -1,4 +1,5 @@
 import React from 'react'
+import {assets} from '../assets/assets'
 
 const Sidebar  = () => {
   return (
@@ -6,12 +7,40 @@ const Sidebar  = () => {
       <div className="s bg-[#121212] h-[15%] rounded flex flex-col justify-around">
         <div className="flex item-center gap-3 pl-8 cursor-pointer">
 
-            <img src={assets.home_icon} alt="" />
-            <p className="font-bold"></p>
+            <img className='w  -6' src={assets.home_icon} alt="" />
+            <p className="font-bold">Home</p>
+        <div className="flex item-center gap-3 pl-8 cursor-pointer">
+
+            <img className='w-6' src={assets.search_icon} alt="" />
+            <p className="font-bold">Search</p>
         </div>
       </div>
+      <div className="bg-[#121212] h=[85%] rounded">
+
+
+        <div className="p-4 flex itmes-center justify-between">
+            <div className="flex items-center gap-3">
+                
+                <img className='' src={assets.stack_icon} alt="" />
+                <p className='font-semibold'>   Your Library</p>
+            </div>
+            <div className='flex items-center gap-3'>
+                <img src={assets.arrow_icon} alt="" className="w-5" />
+                <img src={assets.plus_icon} alt="" className="" />
+            </div>
+        </div>
+
+        <div className='p-4 bg-[#242424] m-2 rounded font-semibold flex flex-col items-start '>
+            <h1>Create your first playlist</h1>
+            <p className='font-light'>it's easy we will help you.</p>
+            <button className=''>Create Playlist</button>
+
+        </div>
+
+        </div></div>
+
     </div>
   )
 }
-
+    
 export default Sidebar
