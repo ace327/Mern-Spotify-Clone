@@ -61,6 +61,14 @@ const PlayerContextProvider = (props) => {
         }
     }
 
+    const seekSong = async (e) => {
+
+
+        audioRef.current.currentTime = ((e.nativeEvent.offsetX / seekBg.current.offsetWidth*)audioRef.current.duraction)
+
+
+    }
+
 
 
     useEffect(() => {
@@ -104,7 +112,8 @@ const PlayerContextProvider = (props) => {
         pause,
         playwithId,
         previous,
-        next
+        next,
+        seekSong
 
 
 
