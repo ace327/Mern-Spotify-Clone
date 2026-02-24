@@ -9,6 +9,8 @@ import Display from './components/Display'
 function App() {
   const [count, setCount] = useState(0)
 
+  const {audioRef, track} = useContext(PlayerContext); 
+
   return (
     <>
     <div className='h-screen bg-black'>
@@ -18,8 +20,9 @@ function App() {
 
         <Display />
 
-         <Player/>
       </div>
+         <Player/>
+         <audio ref={audioRef} src={track.file} preload = "auto"></audio>
 
     </div>
     </>
