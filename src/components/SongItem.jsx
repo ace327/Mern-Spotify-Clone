@@ -1,6 +1,6 @@
 import React from 'react'
 import { albumsData } from '../assets/assets'
-import { PlayerContext } from '../context/PLayerContex'
+import { PlayerContext } from '../context/PlayerContext'
 
 const SongItem = ({name, image, desc, id}) => {
 

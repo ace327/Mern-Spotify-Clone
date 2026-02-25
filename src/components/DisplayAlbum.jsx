@@ -20,7 +20,7 @@ const DisplayAlbum = () => {
         <div className="flex flex-col">
             <p>Playlist</p>
             <h2 className='text-5xl font-bold mb-4 md:text-7xl '>{albumData.name}</h2>
-            <h4>{albumsData.desc}</h4>
+            <h4>{albumData.desc}</h4>
             <p className="mt-1">
                 <img src={assets.spotify_logo} alt="" className="inline-block" />
                 <b>Spotify</b>
