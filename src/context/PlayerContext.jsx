@@ -1,9 +1,9 @@
-import { createContext, useEffect } from "react";
+import { createContext, useEffect , useState, useRef} from "react";
 import { songsData } from "../assets/assets";
 
 export const PlayerContext = createContext();
 
-const PlayerContext = createContext();
+
 
 const PlayerContextProvider = (props) => {
 
@@ -19,7 +19,7 @@ const PlayerContextProvider = (props) => {
             second: 0,
             minute: 0
         },
-        totalTime: t {
+        totalTime:  {
 
             second:0,
             minute: 0
@@ -64,7 +64,7 @@ const PlayerContextProvider = (props) => {
     const seekSong = async (e) => {
 
 
-        audioRef.current.currentTime = ((e.nativeEvent.offsetX / seekBg.current.offsetWidth)*audioRef.current.duraction)
+        audioRef.current.currentTime = ((e.nativeEvent.offsetX / seekBg.current.offsetWidth)*audioRef.current.duration)
 
 
     }
@@ -75,8 +75,8 @@ const PlayerContextProvider = (props) => {
 
         setTimeout(() => {
 
-            audio.Ref.current.ontimeupdate =  () => {
-                seekBar.current.style.width = (Math.floor(audioRef.current.currentTime/audioRef.current.duaryion*100))+"%";
+            audioRef.current.ontimeupdate =  () => {
+                seekBar.current.style.width = (Math.floor(audioRef.current.currentTime/audioRef.current.duration*100))+"%";
 
                 setTime({
                                                 currentTime : {
@@ -100,7 +100,7 @@ const PlayerContextProvider = (props) => {
     const contextValue = {
 
         audioRef,
-        seekBAr,
+        seekBar,
         seekBg,
         track,
         setTrack,

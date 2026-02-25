@@ -16,10 +16,10 @@ const DisplayAlbum = () => {
     <div>
       <Navbar />
       <div className="mt-10 flex gap-8 flex-col md:flex-row md:items-end">
-        <img className="w-48 rounded" src={albumsData.image} alt="" />
+        <img className="w-48 rounded" src={albumData.image} alt="" />
         <div className="flex flex-col">
             <p>Playlist</p>
-            <h2 className='text-5xl font-bold mb-4 md:text-7xl '>{albumsData.name}</h2>
+            <h2 className='text-5xl font-bold mb-4 md:text-7xl '>{albumData.name}</h2>
             <h4>{albumsData.desc}</h4>
             <p className="mt-1">
                 <img src={assets.spotify_logo} alt="" className="inline-block" />
@@ -40,16 +40,18 @@ const DisplayAlbum = () => {
       <hr />
       {
         songsData.map((item,index)=> (
-            <div key={index} className='grid grid-cols-3 sm:grid-cols-4 gap-2 p-2 items-center text-[#a7a7a7] hover:bg-[#fffff2b] cursor-pointer'>
+            <div key={index} className='grid grid-cols-3 sm:grid-cols-4 gap-2 p-2 items-center text-[#a7a7a7] hover:bg-[#ffffff2b] cursor-pointer'>
                 <p className="text-white">
                     <b className='mr-4 text-[#a7a7a7]'>{index}</b>
                     <img className='inline w-10 mr-5' src={item.image} alt="" />
                     {item.name}
                 </p>
 
-                <p className='text-[15px]'>{albumsData.name}</p>
+                <p className='text-[15px]'>{albumData.name}</p>
                 <p className="text-[15px] hidden sm:block">5 days ago</p>
                 <p className="text-[15px] text-center">{item.duration}</p>
+
+                </div>
         ))
       }
     </div>
