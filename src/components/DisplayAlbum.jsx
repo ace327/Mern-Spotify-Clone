@@ -1,11 +1,12 @@
 import React from 'react'
 import Navbar from './Navbar'
 import { useParams } from 'react-router-dom'
+import { albumsData, songsData, assets } from '../assets/assets';
 
 const DisplayAlbum = () => {
 
     const {id} = useParams();
-    const albumsData = albumsData[id];
+    const albumData = albumsData[id];
 
 
 
@@ -42,7 +43,7 @@ const DisplayAlbum = () => {
             <div key={index} className='grid grid-cols-3 sm:grid-cols-4 gap-2 p-2 items-center text-[#a7a7a7] hover:bg-[#fffff2b] cursor-pointer'>
                 <p className="text-white">
                     <b className='mr-4 text-[#a7a7a7]'>{index}</b>
-                    <img className='inline w-10 mr-5'src={item.image} alt="" />
+                    <img className='inline w-10 mr-5' src={item.image} alt="" />
                     {item.name}
                 </p>
 
@@ -55,4 +56,4 @@ const DisplayAlbum = () => {
   )
 }
 
-export default DisplayAlbum
+export default DisplayAlbum;
