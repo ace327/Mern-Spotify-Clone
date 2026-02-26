@@ -122,7 +122,7 @@ const PlayerContextProvider = (props) => {
 
     return(
 
-        <PlayerContext.Provider>
+        <PlayerContext.Provider value={contextValue}>
             {props.children}
         </PlayerContext.Provider>
     )
