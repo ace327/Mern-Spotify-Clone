@@ -2,7 +2,7 @@ import React from 'react'
 import { albumsData } from '../assets/assets'
 import { PlayerContext } from '../context/PlayerContext'
 
-const SongItem = ({name, image, desc, id}) => {
+const SongItem = ({name, image, desc, id, index}) => {
 
   const {playWithId} = useContext(PlayerContext)
 
