@@ -14,7 +14,7 @@ const Navbar = () => {
 
   return ( 
     <div className='w-full flex justify-between items-center font-semibold '>
-        <div className="flex items-cener gap-2">
+        <div className="flex items-center gap-2">
             <img onClick={() =>  navigate(-1)}src={assets.arrow_left} alt="" className="w-8 bg-black p-2 rounded-2xl cursor-pointer" />
             <img onClick={() =>  navigate(1)}src={assets.arrow_right} alt="" className="w-8 bg-black p-2 rounded-2xl cursor-pointer" />
         </div>

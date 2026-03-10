@@ -11,7 +11,7 @@ const Display = () => {
   const location = useLocation();
   const isAlbum = location.pathname.includes("album");
   const albumId = isAlbum ? location.pathname.split("/").pop(): "" ;
-  const bgColor = albumsData[Number(albumId)].bgColor;
+  const bgColor =isAlbum ? albumsData[Number(albumId)]?.bgColor : null;
 
   useEffect(()=> {
 

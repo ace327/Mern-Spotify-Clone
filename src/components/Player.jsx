@@ -48,7 +48,7 @@ const Player = () => {
             <img src={assets.queue_icon} alt="" className="w-4" />
             <img src={assets.speaker_icon} alt="" className="w-4" />
             <img src={assets.volume_icon} alt="" className="w-4" />
-            <div className="w-20 bg-state-50 h-1 rounded"></div>
+            <div className="w-20 bg-gray-300 h-1 rounded"></div>
         </div>
       
     </div>
